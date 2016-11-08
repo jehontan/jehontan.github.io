@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon-university.ico">
+
+  <!-- Meta information -->
+  <title>Parsing XML with Ruby</title>
+  <meta name="description"
+        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacus est, sollicitudin sit amet molestie et, sodales vel ex. Vivamus lobortis blandit nibh...">
+  <link rel="canonical"
+        href="http://jehontan.com/ruby/2014/01/14/xml.html" />
+
+  <!-- hack.css -->
+  <link rel="stylesheet" href="https://npmcdn.com/hack/dist/hack.css" />
+  
+
+  <!-- Prism.js -->
+  <link rel="stylesheet" href="https://npmcdn.com/prismjs@1.5.1/themes/prism.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+
+  <!-- Custom style -->
+  <link rel="stylesheet" href="/css/main.css" />
+
+  <!-- Feed -->
+  <link rel="alternate" type="application/rss+xml" title="Je Hon Tan"
+        href="/feed.xml" />
+
+  <!-- 'jekyll-seo' plugin -->
+  <!-- Begin Jekyll SEO tag v2.0.0 -->
+<title>Parsing XML with Ruby - Je Hon Tan</title>
+<meta property="og:title" content="Parsing XML with Ruby" />
+<meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacus est, sollicitudin sit amet molestie et, sodales vel ex. Vivamus lobortis blandit nibh, eu cursus justo ultrices ultricies. Nunc vitae ipsum imperdiet, mattis elit nec, sollicitudin nulla. Phasellus magna tortor, accumsan sit amet sapien eu, rhoncus consectetur est. Nunc pellentesque quam odio, eu cursus ex porttitor at. Sed ut neque dolor. Morbi ut rhoncus lectus. Ut luctus, enim ac interdum tempor, eros erat feugiat ante, sit amet feugiat magna quam non dolor. Pellentesque fermentum quam in justo mollis facilisis. Integer et tortor urna. Proin aliquam purus auctor sagittis mollis. Proin a sollicitudin turpis. In rhoncus eget massa id feugiat. Duis rutrum ligula eget erat feugiat, nec placerat ante facilisis. Suspendisse iaculis neque eu elementum mollis. Ut tempus libero sed congue iaculis." />
+<meta property="og:description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacus est, sollicitudin sit amet molestie et, sodales vel ex. Vivamus lobortis blandit nibh, eu cursus justo ultrices ultricies. Nunc vitae ipsum imperdiet, mattis elit nec, sollicitudin nulla. Phasellus magna tortor, accumsan sit amet sapien eu, rhoncus consectetur est. Nunc pellentesque quam odio, eu cursus ex porttitor at. Sed ut neque dolor. Morbi ut rhoncus lectus. Ut luctus, enim ac interdum tempor, eros erat feugiat ante, sit amet feugiat magna quam non dolor. Pellentesque fermentum quam in justo mollis facilisis. Integer et tortor urna. Proin aliquam purus auctor sagittis mollis. Proin a sollicitudin turpis. In rhoncus eget massa id feugiat. Duis rutrum ligula eget erat feugiat, nec placerat ante facilisis. Suspendisse iaculis neque eu elementum mollis. Ut tempus libero sed congue iaculis." />
+<link rel="canonical" href="http://jehontan.com/ruby/2014/01/14/xml.html" />
+<meta property="og:url" content="http://jehontan.com/ruby/2014/01/14/xml.html" />
+<meta property="og:site_name" content="Je Hon Tan" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-01-14T19:18:23-05:00" />
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Parsing XML with Ruby",
+    "datePublished": "2014-01-14T19:18:23-05:00",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacus est, sollicitudin sit amet molestie et, sodales vel ex. Vivamus lobortis blandit nibh, eu cursus justo ultrices ultricies. Nunc vitae ipsum imperdiet, mattis elit nec, sollicitudin nulla. Phasellus magna tortor, accumsan sit amet sapien eu, rhoncus consectetur est. Nunc pellentesque quam odio, eu cursus ex porttitor at. Sed ut neque dolor. Morbi ut rhoncus lectus. Ut luctus, enim ac interdum tempor, eros erat feugiat ante, sit amet feugiat magna quam non dolor. Pellentesque fermentum quam in justo mollis facilisis. Integer et tortor urna. Proin aliquam purus auctor sagittis mollis. Proin a sollicitudin turpis. In rhoncus eget massa id feugiat. Duis rutrum ligula eget erat feugiat, nec placerat ante facilisis. Suspendisse iaculis neque eu elementum mollis. Ut tempus libero sed congue iaculis.",
+    "url": "http://jehontan.com/ruby/2014/01/14/xml.html"
+  }
+</script>
+<!-- End Jekyll SEO tag -->
+</head>
+
+
+
+  
+  <body class="hack">
+  
+
+    <div class="container">
+      <div class="grid">
+        <aside class="cell -3of12" role="navigation">
+          <div class="t-hackcss-navigation">
+  <h2 class="t-hackcss-navigation-heading">Menu</h2>
+
+  <nav class="menu" role="menubar">
+    
+    
+      <a class="menu-item "
+        role="menuitem" href="/" title="">
+        Home <div class="pull-right">»</div>
+      </a>
+    
+      <a class="menu-item "
+        role="menuitem" href="/blog" title="">
+        Blog <div class="pull-right">»</div>
+      </a>
+    
+  </nav>
+
+</div>
+
+        </aside>
+
+        <main class="cell -9of12">
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Parsing XML with Ruby</h1>
+    <p class="post-meta">
+      <time datetime="2014-01-14T19:18:23-05:00"
+            itemprop="datePublished"
+            class="media-heading">
+        Jan 14, 2014
+      </time>
+
+      
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span itemprop="name">sobolevn</span>
+        </span>
+      
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacus est, sollicitudin sit amet molestie et, sodales vel ex. Vivamus lobortis blandit nibh, eu cursus justo ultrices ultricies. Nunc vitae ipsum imperdiet, mattis elit nec, sollicitudin nulla. Phasellus magna tortor, accumsan sit amet sapien eu, rhoncus consectetur est. Nunc pellentesque quam odio, eu cursus ex porttitor at. Sed ut neque dolor. Morbi ut rhoncus lectus. Ut luctus, enim ac interdum tempor, eros erat feugiat ante, sit amet feugiat magna quam non dolor. Pellentesque fermentum quam in justo mollis facilisis. Integer et tortor urna. Proin aliquam purus auctor sagittis mollis. Proin a sollicitudin turpis. In rhoncus eget massa id feugiat. Duis rutrum ligula eget erat feugiat, nec placerat ante facilisis. Suspendisse iaculis neque eu elementum mollis. Ut tempus libero sed congue iaculis.</p>
+
+<p>Nullam molestie at risus vel aliquam. Morbi ornare cursus facilisis. Praesent tristique lobortis mi in ornare. Donec placerat arcu at ultricies ultricies. Proin ut iaculis erat. Nulla nec erat rutrum, blandit nunc volutpat, faucibus justo. Nam vel consectetur nunc.</p>
+
+<p>Aliquam luctus eros et ligula auctor dictum. Donec sagittis dictum libero bibendum placerat. Duis non cursus sapien, ut bibendum urna. Donec ultricies nulla sit amet viverra congue. Proin pretium, mauris id euismod sagittis, nisi metus volutpat nibh, et imperdiet felis justo eget dui. Nunc facilisis ac urna id vehicula. Sed tempor turpis a consequat eleifend. Sed eleifend auctor est, id euismod massa volutpat sed. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam rhoncus purus nec purus interdum, id mattis lectus facilisis. Cras hendrerit maximus rutrum.</p>
+
+<p>Nulla nec libero lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at quam nisl. Etiam ante enim, semper eget risus fringilla, mollis scelerisque nisi. Maecenas sed arcu imperdiet, blandit odio quis, finibus lacus. Curabitur et nunc enim. Aliquam sed mi efficitur, venenatis tellus id, suscipit turpis. In venenatis libero lacus, pretium aliquet quam imperdiet ac. In porttitor, urna ut rhoncus aliquet, mauris tellus rutrum enim, id aliquam ligula felis ac dui. Nullam diam ante, luctus at erat a, pretium fringilla lectus. Cras nec enim diam. Praesent commodo mi non risus viverra bibendum. Pellentesque eu tristique magna. Vestibulum id est erat. Nunc in blandit velit, ut suscipit sem.</p>
+
+<p>Suspendisse quis ante sed metus tristique tristique. Curabitur blandit diam at facilisis efficitur. Curabitur malesuada semper diam, nec fermentum metus tincidunt et. Nulla nec orci pretium turpis sodales efficitur suscipit euismod ligula. Sed iaculis sed nisi pulvinar efficitur. Curabitur at faucibus lectus. Etiam non cursus arcu. Phasellus urna eros, elementum vitae sodales quis, mollis a metus. Donec ultrices elementum turpis, eu aliquam leo maximus eu.</p>
+
+  </div>
+
+</article>
+
+        </main>
+      </div>
+
+    <footer class="t-hackcss-footer">
+  <hr />
+
+  <h3 class="footer-heading">Je Hon Tan</h3>
+
+  <div class="grid t-hackcss-sm-reversed-grid">
+
+    <div class="cell -5of12">
+      <div class="contact-list">
+        <p>
+          Je Hon Tan,
+          <a href="mailto:jehontan@gmail.com">jehontan@gmail.com</a>
+        </p>
+
+        
+          <!--  -->
+          <!-- <span class="t-hackcss-social">
+            <i class="t-hackcss-icon"><svg viewBox="0 0 72000 72000"><path d="M430.117,261.543V420.56h-92.188V272.193c0-37.271-13.334-62.707-46.703-62.707   c-25.473,0-40.632,17.142-47.301,33.724c-2.432,5.928-3.058,14.179-3.058,22.477V420.56h-92.219c0,0,1.242-251.285,0-277.32h92.21   v39.309c-0.187,0.294-0.43,0.611-0.606,0.896h0.606v-0.896c12.251-18.869,34.13-45.824,83.102-45.824   C384.633,136.724,430.117,176.361,430.117,261.543z M52.183,9.558C20.635,9.558,0,30.251,0,57.463   c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C103.128,30.251,83.734,9.558,52.183,9.558z    M5.477,420.56h92.184v-277.32H5.477V420.56z" fill="#828282"/></svg>
+</i>
+            <a href="https://www.linkedin.com/in/jehontan">jehontan</a>
+          </span> -->
+          
+          <span class="t-hackcss-social">
+            <i class="fa fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/jehontan">jehontan</a>
+          </span>
+        
+      </div>
+    </div>
+
+    <div id="footer-spacer" class="cell -1of12"></div>
+
+    <div class="cell -6of12">
+      <p>Personal website of Je Hon Tan.
+</p>
+    </div>
+  </div>
+
+</footer>
+
+
+    </div>
+
+    <!-- Prism.js -->
+    <script src="https://npmcdn.com/prismjs@1.5.1/prism.js"></script>
+  </body>
+
+</html>
