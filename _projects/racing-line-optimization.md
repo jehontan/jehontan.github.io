@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Racing Line Optimization
-date:
+date: 2016-12-22 04:07:00 -0500
 categories:
 short_description:
 image_preview:
