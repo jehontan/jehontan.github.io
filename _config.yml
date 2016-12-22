@@ -32,6 +32,8 @@ navigation:
     url: /
   - text: Blog
     url: /blog
+  - text: Project
+    url: /projects
 
 # projects:
   # - name: git-secret
