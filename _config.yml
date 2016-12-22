@@ -47,7 +47,7 @@ social:
     link: https://www.linkedin.com/in/jehontan
 
 collections:
-    - projects:
+    projects:
         output: true
         permalink: /projects/:path/:name
 
