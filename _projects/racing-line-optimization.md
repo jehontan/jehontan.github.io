@@ -41,7 +41,7 @@ to obtain the inner and outer boundaries of the track. The figure below shows th
 result of this process, with the inner and outer boundaries of the track highlighted
 in red and blue respectively.
 
-<img src="{{ "images/track_boundaries.png" | relative_url }}" width="400">
+<img src="images/track_boundaries.png" width="400">
 
 ## Trajectory Model
 
@@ -75,7 +75,7 @@ corresponding to the inner boundary and 1 to the outer boundary. A vector of the
 \\(\delta\\) values then represent a trajectory. The below figure illustrates this
 method.
 
-<img src="{{ "images/delta_method.png" | relative_url }}" width="400">
+<img src="images/delta_method.png" width="400">
 
 While this representation is easy, it has the disadvantage of not being able to handle
 tight corners very well. This is due to the fixed spacing of the control points
@@ -86,7 +86,7 @@ within boxes rather than on lines. However an additional check is required to en
 that the control points do not lie outside the track. The below figure illustrates
 this method.
 
-<img src="{{ "images/free_method.png" | relative_url }}" width="400">
+<img src="images/free_method.png" width="400">
 
 ## Minimum Curvature
 
@@ -137,17 +137,17 @@ $$v = \sqrt{\frac{a_{c,max}}{\kappa}}$$
 
 where \\(a_{c,max}\\) is the lateral acceleration at which side-slip occurs.
 
-<img src="{{ "images/v_curvature.png" | relative_url }}" width="600">
+<img src="images/v_curvature.png"" width="600">
 
 Next the maximum braking condition is applied, starting from the end of the trajectory
 to the start, resulting in the following velocity profile:
 
-<img src="{{ "images/v_braking.png" | relative_url }}" width="600">
+<img src="images/v_braking.png" width="600">
 
 The maximum acceleration condition is then applied, from the start of the trajectory
 to the end:
 
-<img src="{{ "images/v_acceleration.png" | relative_url }}" width="600">
+<img src="images/v_acceleration.png" width="600">
 
 And lastly the maximum velocity condition is applied which saturates the velocity
 at the maximum velocity.
@@ -169,7 +169,7 @@ was performed using MATLAB's genetic algorithm function.
 The below figure shows the result obtained for the minimum curvature problem. As
 you can see it's exactly the result one would expect for a minimum curvature trajectory.
 
-<img src="{{ "images/results_curvature.png" | relative_url }}" width="400">
+<img src="images/results_curvature.png" width="400">
 
 This next figure shows the result for the minimum time problem, with the trajectory
 coloured red for low velocity and green for high velocity. The vehicle starts in the top
@@ -177,7 +177,7 @@ left and travels counter-clockwise. Some cool behaviour can be seen, such as a
 double-apex behaviour in the top right corner (compare to [this](https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Double_Apex.jpg/1024px-Double_Apex.jpg)),
 which is not seen in the naïve minimum curvature solution.
 
-<img src="{{ "images/results_time.png" | relative_url }}" width="400">
+<img src="images/results_time.png" width="400">
 
 ## Conclusion
 
