@@ -3,5 +3,5 @@ layout: post
 title: Athens
 date: 2016-11-08
 short_description: A short description.
-image_preview: {% post_url images/athens.jpg %}
+image_preview: images/athens.jpg
 ---
