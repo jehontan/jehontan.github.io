@@ -8,7 +8,7 @@ A list of some of the places I've been.
 
 <div class="media">
   <div class="media-left">
-    <div class="avatarholder"><img>{{ place.image_preview }}</img></div>
+    <div class="avatarholder">[icon]({{ place.image_preview }})</div>
   </div>
   <div class="media-body">
     <div class="media-heading">{{ place.title }}</div>
