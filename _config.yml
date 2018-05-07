@@ -52,6 +52,9 @@ collections:
     projects:
         output: true
         permalink: /projects/:path/:name
+    travel:
+        output: true
+        permalink: /travel/:path/:name
 
 # Plugins
 gems:
