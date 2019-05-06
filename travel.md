@@ -19,6 +19,4 @@ Some of the places I've been.
     var marker_{{place.name}} = L.marker([{{place.latitude}}, {{place.longitude}}]).addTo(mymap);
     marker_{{place.name}}.bindPopup('{{place.title}}');
     {% endfor %}
-
-
 </script>
