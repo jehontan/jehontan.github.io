@@ -6,7 +6,7 @@ map: true
 
 Some of the places I've been.
 
-<div id="mapid"></div>
+<div id="mapid" class="cell -12of12" height="500px"></div>
 
 <script>
     var mymap = L.map('mapid').setView([1, 1], 1);
