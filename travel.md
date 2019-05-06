@@ -16,7 +16,7 @@ Some of the places I've been.
     }).addTo(mymap);
 
     {% for place in site.travel %}
-    var marker_{{place.title}} = L.marker([{{place.latitude}}, {{place.longitude}}]).addTo(mymap);
+    var marker_{{place.name}} = L.marker([{{place.latitude}}, {{place.longitude}}]).addTo(mymap);
     marker.bindPopup('{{place.title}}');
     {% endfor %}
 
