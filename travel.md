@@ -1,20 +1,24 @@
 ---
 layout: default
+map: true
 ---
 # Travel
 
-A list of some of the places I've been.
+Some of the places I've been.
 
-{% for place in site.travel%}
+<div id="mapid"></div>
 
-<div class="media">
-  <div class="media-left">
-    <img class="avatarholder" src="{{ place.image_preview }}"/>
-  </div>
-  <div class="media-body">
-    <div class="media-heading">{{ place.title }}</div>
-    <div class="media-content">{{ place.short_description }}</div>
-  </div>
-</div>
+<script>
+    var mymap = L.map('mapid').setView([1, 1], 1);
+    L.tileLayer('https://tile.openstreetmap.org//{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+        maxZoom: 18,
+    }).addTo(mymap);
 
-{% endfor %}
+    {% for place in site.travel %}
+    var marker_{{place.title}} = L.marker([{{place.latitude}}, {{place.longitude}}]).addTo(mymap);
+    marker.bindPopup('{{place.title}}');
+    {% endfor %}
+
+
+</script>
