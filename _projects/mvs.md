@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Fisheye Multiview Stereo
-description: Dense learning-based MVS witout retraining
+description: Dense learning-based MVS without retraining
 importance: 2
 category: work
 related_publications: mvsicra2024
